@@ -5,33 +5,26 @@
         <div class="container">
 
             <!-- Logo -->
-            <a class="logo" href="#">
-                <img src="assets/imgs/Logo-light.svg" alt="logo">
+            <a class="logo" href="{{ route('home') }}">
+                <x-logo></x-logo>
             </a>
 
             <!-- navbar links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../inner_pages/about.html">Studio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../inner_pages/portfolio-cards.html">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../inner_pages/blog-grid.html">News</a>
-                    </li>
+                    @foreach (Helper::mainMenu() as $item)
+                        <li class="nav-item">
+                            <a class="nav-link {{ $item['active'] ? 'active' : '' }}" href="{{ $item['url'] }}">{{ $item['title'] }}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="topnav d-flex align-items-center">
-                <a href="../inner_pages/contact.html" class="butn butn-rounded">
+                <a href="{{ route('contacts') }}" class="butn butn-rounded">
                     <div class="d-flex align-items-center">
-                        <span>Start Project</span>
+                        <span>Bizga yozing</span>
                         <span class="icon ml-10">
-                            <img src="../common/imgs/icons/arrow-top-right.svg" alt="">
+                            <img src="{{ asset('common/imgs/icons/arrow-top-right.svg') }}" alt="Right">
                         </span>
                     </div>
                 </a>
@@ -47,103 +40,16 @@
         <div class="container-fluid rest d-flex">
             <div class="menu-links">
                 <ul class="main-menu rest">
-                    <li>
-                        <div class="o-hidden">
-                            <div class="link cursor-pointer dmenu"><span class="fill-text" data-text="Home">Home</span>
-                                <i></i></div>
-                        </div>
-                        <div class="sub-menu">
-                            <ul>
-                                <li>
-                                    <a href="../startup_agency/index.html" class="sub-link">Startup Agency</a>
-                                </li>
-                                <li>
-                                    <a href="../creative-studio/index.html" class="sub-link">Creative Studio</a>
-                                </li>
-                                <li>
-                                    <a href="../creative_agency/index.html" class="sub-link">Creative Agency</a>
-                                </li>
-                                <li>
-                                    <a href="../digital-marketing/index.html" class="sub-link">Digital Marketing</a>
-                                </li>
-                                <li>
-                                    <a href="../modern_portfolio/index.html" class="sub-link">Modern Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="../digital_studio/index.html" class="sub-link">Digital Studio</a>
-                                </li>
-                                <li>
-                                    <a href="../modern_agency/index.html" class="sub-link">Modern Agency</a>
-                                </li>
-                                <li>
-                                    <a href="../creative_agency2/index.html" class="sub-link">Creative Agency 2</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="o-hidden">
-                            <div class="link cursor-pointer dmenu"><span class="fill-text" data-text="Pages">Pages</span>
-                                <i></i></div>
-                        </div>
-                        <div class="sub-menu">
-                            <ul>
-                                <li>
-                                    <a href="../inner_pages/about.html" class="sub-link">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/services.html" class="sub-link">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/service-details.html" class="sub-link">Services Details</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/team.html" class="sub-link">Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/pricing.html" class="sub-link">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/faqs.html" class="sub-link">FAQS</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/contact.html" class="sub-link">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="o-hidden">
-                            <div class="link cursor-pointer dmenu"><span class="fill-text" data-text="Portfolio">Portfolio</span>
-                                <i></i></div>
-                        </div>
-                        <div class="sub-menu">
-                            <ul>
-                                <li>
-                                    <a href="../inner_pages/portfolio-standard.html" class="sub-link">Standard</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/portfolio-gallery.html" class="sub-link">Gallery</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/portfolio-cards.html" class="sub-link">Card</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/portfolio-layout2.html" class="sub-link">Grid 2 Column</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/portfolio-layout3.html" class="sub-link">Gid 3 Column</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/portfolio-layout4.html" class="sub-link">Grid 4 Column</a>
-                                </li>
-                                <li>
-                                    <a href="../inner_pages/project-details.html" class="sub-link">Project Details</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
+                    @foreach (Helper::mainMenu() as $item)
+                        <li>
+                            <div class="o-hidden">
+                                <a href="{{ $item['url'] }}" class="link cursor-pointer dmenu">
+                                    <span class="fill-text" data-text="{{ $item['title'] }}">{{ $item['title'] }}</span>
+                                </a>
+                            </div>
+                        </li>
+                    @endforeach
+                    {{-- <li>
                         <div class="o-hidden">
                             <div class="link cursor-pointer dmenu"><span class="fill-text" data-text="Blog">Blog</span>
                                 <i></i></div>
@@ -161,32 +67,27 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
-                        <div class="o-hidden">
-                            <a href="../inner_pages/contact.html" class="link"><span class="fill-text"
-                                    data-text="Contact Us">Contact Us</span></a>
-                        </div>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
             <div class="cont-info valign">
                 <div class="text-center full-width">
                     <div class="logo">
-                        <img src="../common/imgs/Logo-light.svg" alt="">
+                        <x-logo></x-logo>
                     </div>
                     <div class="social-icon mt-40">
-                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                        <a href="#"> <i class="fab fa-x-twitter"></i> </a>
-                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
-                        <a href="#"> <i class="fab fa-instagram"></i> </a>
+                        @foreach (Helper::socialLinks() as $item)
+                            <a href="{{ $item['url'] }}" rel="nofollow" target="_blank" title="{{ $item['title'] }}">
+                                <i class="{{ $item['icon'] }}"></i>
+                            </a>
+                        @endforeach
                     </div>
-                    <div class="item mt-30">
+                    {{-- <div class="item mt-30">
                         <h5>541 Melville Geek, <br> Palo Alto, CA 94301</h5>
-                    </div>
+                    </div> --}}
                     <div class="item mt-10">
-                        <h5><a href="#0">Hello@email.com</a></h5>
-                        <h5 class="underline"><a href="#0">+1 840 841 25 69</a></h5>
+                        <h5><a href="mailto:info@smartweb.uz">info@smartweb.uz</a></h5>
+                        <h5 class="underline"><a href="tel:+998339010333">+998 33 901 03 33</a></h5>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,38 @@
 <div>
+    @push('styles')
+        <link rel="stylesheet" href="{{ asset('assets/css/home8-style.css') }}">
+    @endpush
+
+    @push('scripts')
+        <script src="{{ asset('assets/js/hscroll.js') }}"></script>
+        <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    @endpush
+
+    <!-- ==================== Start Header ==================== -->
+    <header class="header-cst">
+        <div class="container-fluid">
+            <div class="row sm-marg">
+                <div class="col-lg-6">
+                    <div class="fit-img img">
+                        <img src="assets/imgs/header/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fit-img img md-hide">
+                        <img src="assets/imgs/header/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="caption text-center">
+                <h1 class="title-font">Creative Studio</h1>
+                <h4 class="mt-30 fw-300">
+                    Zamonaviy va tezkor saytlar yaratish arzon narxlarda
+                </h4>
+            </div>
+        </div>
+    </header>
+    <!-- ==================== End Header ==================== -->
+
     <!-- ==================== Start Portfolio ==================== -->
     <section class="work-card section-padding">
         <div class="container-xxl">

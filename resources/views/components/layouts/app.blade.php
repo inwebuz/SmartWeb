@@ -18,11 +18,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
 
     <!-- Plugins -->
-    <link rel="stylesheet" href="/common/css/plugins.css">
+    <link rel="stylesheet" href="{{ asset('common/css/plugins.css') }}">
 
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="/common/css/common_style.css">
-    <link rel="stylesheet" href="/assets/css/home8-style.css">
+    <link rel="stylesheet" href="{{ asset('common/css/common_style.css') }}">
+
+    @if (Route::currentRouteName() != 'home')
+        <link rel="stylesheet" href="{{ asset('assets/css/inner_pages.css') }}">
+    @endif
+
+    @stack('styles')
+
+    @vite('resources/css/app.css')
 
     {!! Helper::setting('head_codes') !!}
 </head>
@@ -66,7 +73,6 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <main>
-                <x-header-block></x-header-block>
                 {{ $slot }}
             </main>
             <x-footer-block></x-footer-block>
@@ -74,24 +80,32 @@
     </div>
 
     <!-- jQuery -->
-    <script src="/common/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="/common/js/lib/jquery-migrate-3.4.0.min.js"></script>
+    <script src="{{ asset('common/js/lib/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('common/js/lib/jquery-migrate-3.4.0.min.js') }}"></script>
 
     <!-- plugins -->
-    <script src="/common/js/lib/plugins.js"></script>
+    <script src="{{ asset('common/js/lib/plugins.js') }}"></script>
 
     <!-- GSAP -->
-    <script src="/common/js/gsap_lib/gsap.min.js"></script>
-    <script src="/common/js/gsap_lib/ScrollSmoother.min.js"></script>
-    <script src="/common/js/gsap_lib/ScrollTrigger.min.js"></script>
-    <script src="/common/js/gsap_lib/SplitText.min.js"></script>
+    <script src="{{ asset('common/js/gsap_lib/gsap.min.js') }}"></script>
+
+    <script src="{{ asset('common/js/gsap_lib/ScrollSmoother.min.js') }}"></script>
+    <script src="{{ asset('common/js/gsap_lib/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('common/js/gsap_lib/SplitText.min.js') }}"></script>
+    <script src="{{ asset('common/js/gsap_lib/matter.js') }}"></script>
+    <script src="{{ asset('common/js/gsap_lib/throwable.js') }}"></script>
 
     <!-- common scripts -->
-    <script src="/common/js/common_scripts.js"></script>
+    <script src="{{ asset('common/js/common_scripts.js') }}"></script>
 
     <!-- custom scripts -->
-    <script src="/assets/js/hscroll.js"></script>
-    <script src="/assets/js/scripts.js"></script>
+    @if (Route::currentRouteName() != 'home')
+        <script src="{{ asset('assets/js/inner_pages.js') }}"></script>
+    @endif
+
+    @stack('scripts')
+
+    @vite('resources/js/app.js')
 
     {!! Helper::setting('body_end_codes') !!}
 
