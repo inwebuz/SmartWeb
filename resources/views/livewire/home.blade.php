@@ -26,7 +26,7 @@
             <div class="caption text-center">
                 <h1 class="title-font">Creative Studio</h1>
                 <h4 class="mt-30 fw-300">
-                    Zamonaviy va tezkor saytlar yaratish arzon narxlarda
+                    Zamonaviy va tezkor saytlar yaratish
                 </h4>
             </div>
         </div>
@@ -107,13 +107,13 @@
         <div class="container">
             <div class="sec-head mb-80 pb-30 bord-thin-bottom-light">
                 <div class="d-flex align-items-center">
-                    <h6 class="fz-40 text-u ls2 title-font">↳ About Us</h6>
+                    <h6 class="fz-40 text-u ls2 title-font">↳ Biz haqimizda</h6>
                     <div class="ml-auto">
-                        <a href="../inner_pages/about.html" class="butn butn-md butn-bord butn-rounded">
+                        <a href="{{ route('contacts') }}" class="butn butn-md butn-bord butn-rounded">
                             <div class="d-flex align-items-center">
-                                <span>View More</span>
+                                <span>Aloqa</span>
                                 <span class="icon invert ml-10">
-                                    <img src="../common/imgs/icons/arrow-top-right.svg" alt="">
+                                    <img src="{{ asset('common/imgs/icons/arrow-top-right.svg') }}" alt="">
                                 </span>
                             </div>
                         </a>
@@ -123,37 +123,34 @@
             <div class="row justify-content-end">
                 <div class="col-lg-9">
                     <div class="text mb-80 wow fadeInUp slow" data-wow-delay="0.2s">
-                        <h5>We are a team of passionate and crazy individuals dedicated to bringing your
-                            ideas to life. With a keen eye for aesthetics, attention to detail, and a deep
-                            understanding of design principles, we strive to deliver exceptional results
-                            that exceed your expectations</h5>
+                        <h5>Bizning jamoa mijozlar uchun qulay, sifatli va samarali yechimlar yaratadi, biznesingizning o‘sishi va rivojlanishi yo‘lida hamkorlik qilamiz</h5>
                     </div>
                     <div class="states">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="item sm-mb30 wow fadeInUp slow" data-wow-delay="0.2s">
-                                    <span>Established for</span>
+                                    <span>Tajriba</span>
                                     <div class="d-flex align-items-end">
                                         <h2 class="title-font">09</h2>
-                                        <span class="spn-botm">Years</span>
+                                        <span class="spn-botm">yil</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="item sm-mb30 wow fadeInUp slow" data-wow-delay="0.4s">
-                                    <span>Work Across</span>
+                                    <span>Mijozlar</span>
                                     <div class="d-flex align-items-end">
-                                        <h2 class="title-font">17</h2>
-                                        <span class="spn-botm">Countries</span>
+                                        <h2 class="title-font">100</h2>
+                                        <span class="spn-botm">+</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="item wow fadeInUp slow" data-wow-delay="0.6s">
-                                    <span>Over</span>
+                                    <span>Loyihalar</span>
                                     <div class="d-flex align-items-end">
-                                        <h2 class="title-font">80</h2>
-                                        <span class="spn-botm">Project</span>
+                                        <h2 class="title-font">150</h2>
+                                        <span class="spn-botm">+</span>
                                     </div>
                                 </div>
                             </div>
@@ -172,13 +169,13 @@
                 <div class="container">
                     <div class="sec-head mb-80 pb-30 bord-thin-bottom">
                         <div class="d-flex align-items-center">
-                            <h6 class="fz-40 text-u ls2 title-font">↳ Our Services</h6>
+                            <h6 class="fz-40 text-u ls2 title-font">↳ Bizning xizmatlar</h6>
                             <div class="ml-auto">
-                                <a href="../inner_pages/services.html" class="butn butn-md butn-bord butn-rounded">
+                                <a href="{{ route('services') }}" class="butn butn-md butn-bord butn-rounded">
                                     <div class="d-flex align-items-center">
-                                        <span>View More</span>
+                                        <span>Batafsil</span>
                                         <span class="icon ml-10">
-                                            <img src="../common/imgs/icons/arrow-top-right.svg" alt="">
+                                            <img src="{{ asset('common/imgs/icons/arrow-top-right.svg') }}" alt="">
                                         </span>
                                     </div>
                                 </a>
@@ -190,18 +187,18 @@
                             <h6>01.</h6>
                         </div>
                         <div class="title js-splittext-lines">
-                            <h2>Branding</h2>
+                            <h2>Sayt yaratish</h2>
                             <div class="list">
-                                <span>Brand Identity</span>
-                                <span>Logo Design</span>
-                                <span>Brand Strategy</span>
-                                <span>Art Direction</span>
+                                <span>Landing</span>
+                                <span>Vizitka</span>
+                                <span>Korporativ sayt</span>
+                                <span>Onlayn magazin</span>
                             </div>
                         </div>
                         <div class="ml-auto">
                             <div class="text-right">
                                 <div class="icon">
-                                    <img src="../common/imgs/icons/crown-solid.svg" alt="">
+                                    <img src="{{ asset('common/imgs/icons/crown-solid.svg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -211,60 +208,16 @@
                             <h6>02.</h6>
                         </div>
                         <div class="title">
-                            <h2>Web Design</h2>
+                            <h2>Telegram Bot yaratish</h2>
                             <div class="list">
-                                <span>Brand Identity</span>
-                                <span>Logo Design</span>
-                                <span>Brand Strategy</span>
-                                <span>Art Direction</span>
+                                <span>Tayyor botlar</span>
+                                <span>Unikal botlar</span>
                             </div>
                         </div>
                         <div class="ml-auto">
                             <div class="text-right">
                                 <div class="icon">
-                                    <img src="../common/imgs/icons/bezier-curve-solid.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item d-flex align-items-end justify-content-between">
-                        <div class="numb">
-                            <h6>03.</h6>
-                        </div>
-                        <div class="title">
-                            <h2>Development</h2>
-                            <div class="list">
-                                <span>Brand Identity</span>
-                                <span>Logo Design</span>
-                                <span>Brand Strategy</span>
-                                <span>Art Direction</span>
-                            </div>
-                        </div>
-                        <div class="ml-auto">
-                            <div class="text-right">
-                                <div class="icon">
-                                    <img src="../common/imgs/icons/code-solid.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item d-flex align-items-end justify-content-between">
-                        <div class="numb">
-                            <h6>04.</h6>
-                        </div>
-                        <div class="title">
-                            <h2>Growth</h2>
-                            <div class="list">
-                                <span>Brand Identity</span>
-                                <span>Logo Design</span>
-                                <span>Brand Strategy</span>
-                                <span>Art Direction</span>
-                            </div>
-                        </div>
-                        <div class="ml-auto">
-                            <div class="text-right">
-                                <div class="icon">
-                                    <img src="../common/imgs/icons/chart-line-solid.svg" alt="">
+                                    <img src="{{ asset('common/imgs/icons/bezier-curve-solid.svg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -276,7 +229,7 @@
     <!-- ==================== End services ==================== -->
 
     <!-- ==================== Start Team ==================== -->
-    <section class="team-cst section-padding">
+    {{-- <section class="team-cst section-padding">
         <div class="container">
             <div class="sec-head pb-30 bord-thin-bottom-light">
                 <div class="d-flex align-items-center">
@@ -377,14 +330,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- ==================== End Team ==================== -->
 
     <!-- ==================== Start dark box ==================== -->
     <section class="container-fluid">
         <div class="section-padding sub-bg radius-30">
             <!-- ==================== Start Testimonials ==================== -->
-            <div class="testimonials-ds">
+            {{-- <div class="testimonials-ds">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
@@ -469,51 +422,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- ==================== End Testimonials ==================== -->
 
             <!-- ==================== Start clients ==================== -->
             <div class="clients-ds mt-100">
                 <div class="container">
                     <div class="sec-head mb-80">
-                        <h6 class="fz-40 text-u ls2 title-font">↳ Partner with +150 brands</h6>
+                        <h6 class="fz-40 text-u ls2 title-font">↳ Texnologiyalar</h6>
                     </div>
-                    <div class="row sm-marg">
-                        <div class="col-lg col-md-4 col-6 md-mb30">
-                            <div class="item d-flex align-items-center justify-content-center">
-                                <div class="img">
-                                    <img src="assets/imgs/clients/1.svg" alt="">
+                    <div class="row sm-marg gap-30">
+                        @php
+                            $technologies = ['php', 'js', 'html', 'css', 'nodejs', 'laravel', 'react', 'nextjs', 'composer', 'npm', 'mysql', 'mariadb', 'postgresql', 'sqlite', 'github', 'gitlab', 'bitbucket', 'figma', 'photoshop', 'typescript', 'tailwind', 'bootstrap'];
+                        @endphp
+                        @foreach ($technologies as $technology)
+                            <div class="col-lg-3 col-md-4 col-6 py-2">
+                                <div class="item d-flex align-items-center justify-content-center">
+                                    <div class="img">
+                                        <img src="{{ asset('assets/imgs/technologies/' . $technology . '.svg') }}" alt="{{ $technology }}">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg col-md-4 col-6 md-mb30">
-                            <div class="item d-flex align-items-center justify-content-center">
-                                <div class="img">
-                                    <img src="assets/imgs/clients/2.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg col-md-4 col-6 md-mb30">
-                            <div class="item d-flex align-items-center justify-content-center">
-                                <div class="img">
-                                    <img src="assets/imgs/clients/3.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg col-md-4 col-6 sm-mb30">
-                            <div class="item d-flex align-items-center justify-content-center">
-                                <div class="img">
-                                    <img src="assets/imgs/clients/4.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg col-md-4 col-6">
-                            <div class="item d-flex align-items-center justify-content-center">
-                                <div class="img">
-                                    <img src="assets/imgs/clients/5.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
